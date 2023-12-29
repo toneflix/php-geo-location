@@ -89,4 +89,23 @@ class Polygon
     {
         return $this->GeoPoints;
     }
+
+    /**
+     * @return array
+     */
+    public function toBase(): array
+    {
+        $n = count($this->GeoPoints);
+
+        $base = [];
+
+        for ($i = 1; $i <= $n; $i++) {
+            $obj = new \stdClass();
+            $obj->latitude = $this->GeoPoints[$i - 1]->getLatitude();
+            $obj->longitude = $this->GeoPoints[$i - 1]->getLongitude();
+            $base[] = $obj;
+        }
+
+        return $base;
+    }
 }
