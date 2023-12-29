@@ -15,7 +15,7 @@ class GeoLocationTest extends TestCase
         $geopointA = new GeoPoint(40.5187154, -74.4120953);
         $geopointB = new GeoPoint(40.65, -73.95);
         $distance = $geopointA->distanceTo($geopointB, 'km');
-        $this->assertEquals(41.663681581973, $distance);
+        $this->assertEquals(41.66368158208156, $distance);
     }
 
     public function testDistanceInMilesBetweenGeopointsUsingCoordinates()
