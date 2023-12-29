@@ -1,0 +1,48 @@
+{
+    "name": "toneflix-code/php-geo-location",
+    "type": "library",
+    "description": "Powerful GeoCoding library forked from anthonymartin/geo-location and actively maintained: Retrieve bounding box coordinates, distances between geopoints, point in polygon, get longitude and latitude from addresses and more with GeoLocation for PHP",
+    "keywords": [
+        "geolocation",
+        "geocoding",
+        "bounding coordinates",
+        "bounding box coordinates",
+        "distances",
+        "geocode",
+        "latitude",
+        "longitude",
+        "point in polygon",
+        "toneflix-code",
+        "laravel-fileable"
+    ],
+    "homepage": "https://github.com/toneflix-code/php-geo-location",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Toneflix Code",
+            "email": "code@toneflix.com.ng",
+            "role": "Organization"
+        },
+        {
+            "name": "Legacy",
+            "email": "hamzas.legacy@toneflix.com.ng",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0|^8.1|8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "ToneflixCode\\PhpGeoLocation\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ToneflixCode\\PhpGeoLocation\\Tests\\": "tests"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    }
+}
