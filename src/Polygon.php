@@ -2,6 +2,8 @@
 
 namespace ToneflixCode\PhpGeoLocation;
 
+use ToneflixCode\PhpGeoLocation\Objects\Point;
+
 class Polygon
 {
     protected $GeoPoints = [];
@@ -100,10 +102,7 @@ class Polygon
         $base = [];
 
         for ($i = 1; $i <= $n; $i++) {
-            $obj = new \stdClass();
-            $obj->latitude = $this->GeoPoints[$i - 1]->getLatitude();
-            $obj->longitude = $this->GeoPoints[$i - 1]->getLongitude();
-            $base[] = $obj;
+            $base[] = new Point($this->GeoPoints[$i - 1]->getLatitude(), $this->GeoPoints[$i - 1]->getLongitude());
         }
 
         return $base;
