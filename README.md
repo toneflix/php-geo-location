@@ -10,6 +10,12 @@ Features include:
 2. calculate distances between geopoints/coordinates
 3. Solve point in polygon problems (identify whether a given point is within the bounds of a polygon)
 
+### Installation
+
+```bash
+composer require toneflix-code/php-geo-location
+```
+
 # Examples
 
 ## Get distance between two points:
