@@ -3,6 +3,7 @@
 namespace ToneflixCode\PhpGeoLocation\Tests;
 
 use PHPUnit\Framework\TestCase;
+use ToneflixCode\PhpGeoLocation\Exceptions\OutOfBoundsException;
 use ToneflixCode\PhpGeoLocation\GeoLocation;
 use ToneflixCode\PhpGeoLocation\GeoPoint;
 use ToneflixCode\PhpGeoLocation\Polygon;
@@ -194,7 +195,7 @@ class GeoLocationTest extends TestCase
 
     public function testInvalidArgumentExceptionIsThrown()
     {
-        $this->expectException(ToneflixCode\PhpGeoLocation\Exceptions\OutOfBoundsException::class);
+        $this->expectException(OutOfBoundsException::class);
         $geopoint = new GeoPoint(99999999, 9999999);
     }
 

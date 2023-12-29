@@ -74,12 +74,12 @@ class GeoPoint
 
     public function getLatitude($inRadians = false)
     {
-        return (! $inRadians) ? $this->degLat : $this->radLat;
+        return (!$inRadians) ? $this->degLat : $this->radLat;
     }
 
     public function getLongitude($inRadians = false)
     {
-        return (! $inRadians) ? $this->degLon : $this->radLon;
+        return (!$inRadians) ? $this->degLon : $this->radLon;
     }
 
     /**
@@ -174,11 +174,11 @@ class GeoPoint
      */
     public static function fromAddress($address, $apiKey = null)
     {
-        if (! $apiKey) {
+        if (!$apiKey) {
             throw new NoApiKeyException();
         }
-        $url = 'https://maps.googleapis.com/maps/api/geocode/json?address='.
-            urlencode($address).'&sensor=false&key='.$apiKey;
+        $url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' .
+            urlencode($address) . '&sensor=false&key=' . $apiKey;
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -189,9 +189,9 @@ class GeoPoint
         $response = json_decode(curl_exec($ch));
         curl_close($ch);
         if (
-            ! is_object($response) ||
-            ! isset($response->results[0]->geometry->location->lat) ||
-            ! isset($response->results[0]->geometry->location->lng)
+            !is_object($response) ||
+            !isset($response->results[0]->geometry->location->lat) ||
+            !isset($response->results[0]->geometry->location->lng)
         ) {
             if (isset($response->error_message)) {
                 throw new UnexpectedResponseException($response->error_message);

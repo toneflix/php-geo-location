@@ -12,7 +12,7 @@
         "latitude",
         "longitude",
         "point in polygon",
-        "toneflix-code",
+        "php-geo-location",
         "laravel-fileable"
     ],
     "homepage": "https://github.com/toneflix-code/php-geo-location",
@@ -32,6 +32,9 @@
     "require": {
         "php": "^8.0|^8.1|8.2"
     },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
     "autoload": {
         "psr-4": {
             "ToneflixCode\\PhpGeoLocation\\": "src"
@@ -41,8 +44,5 @@
         "psr-4": {
             "ToneflixCode\\PhpGeoLocation\\Tests\\": "tests"
         }
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^9.0"
     }
 }
